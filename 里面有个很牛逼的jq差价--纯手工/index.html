@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>京东商城</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .slider {
+      height: 340px;
+      width: 790px;
+      margin: 100px auto;
+      position: relative;
+    }
+    
+    .slider li {
+      position: absolute;
+      display: none;
+    }
+    
+    .slider li:first-child {
+      display: block;
+    }
+    
+    .arrow {
+      display: none;
+    }
+    
+    /*.slider:hover .arrow {
+      display: block;
+    }*/
+    
+    .arrow-left,
+    .arrow-right {
+      font-family: "SimSun", "宋体";
+      width: 30px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 30px;
+    }
+    
+    .arrow-left:hover,
+    .arrow-right:hover {
+      background-color: rgba(0, 0, 0, .5);
+    }
+    
+    .arrow-left {
+      left: 0;
+    }
+    
+    .arrow-right {
+      right: 0;
+    }
+  
+  #drag{
+  	width: 100px;
+  	height: 100px;
+  	background: red;
+  	position: absolute;
+  }
+  </style>
+</head>
+<body>
+<div class="slider">
+  <ul>
+    <li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+    <!-- <li><a href="#"><img src="images/4.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/5.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/6.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/7.jpg" alt=""></a></li>
+    <li><a href="#"><img src="images/8.jpg" alt=""></a></li> -->
+  </ul>
+  <!--箭头-->
+  <div class="arrow1">
+    <span class="arrow-left">&lt;</span>
+    <span class="arrow-right">&gt;</span>
+  </div>
+</div>
+<div id="drag">
+	
+</div>
+  <script src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.fn.extend({
+					drag :function(){
+					
+						this.on('mousedown',function(ev){
+							var dx = ev.clientX  - $(this).offset().left;
+							var dy = ev.clientY  - $(this).offset().top;
+							var This = this;
+							$(document).on('mousemove',function(ev){
+									This.style.left = ev.clientX - dx +'px';
+									This.style.top  = ev.clientY - dy + 'px';
+							});
+							$(document).on('mouseup',function(){
+								$(document).off();  //还是这个比较牛逼，直接清空所有事件
+							})
+						
+						})
+						//链式调用，retrun出去这个对象
+						return this;
+					},
+				slider : function(options){
+					
+						var options = options || {};
+						options.arrowName = options.arrowName || 'arrow';
+						
+						var $arrow  = $('.arrow') || $('.'+ options.arrowName);
+						var index =0;
+						var $lis = 	$('.slider >ul > li ');
+						var len = $lis.length;
+						var $arrowLeft  = $(this).find('.arrow-left');
+						var $arrowRight = $(this).find('.arrow-right');
+						//获取焦点图
+						
+						this.on('mouseenter',function(){
+								$arrow.stop().fadeIn(200)
+						});
+						this.on('mouseleave',function(){
+								$arrow.stop().fadeOut(200)
+						})
+						//给右箭头注册事件
+						
+						$arrowRight.on('click',function(){
+								if(options.loop){
+											if(index>=len-1){
+												index = 0;
+											}
+								}else{
+									if(index>=len-1){
+												index = len-2;
+									}
+								}
+								
+								index++
+								$lis.eq(index).stop().fadeIn(2000).siblings().fadeOut()
+						})
+						$arrowLeft.on('click',function(){
+							if(options.loop){
+								if(index<0){
+									index= len-1
+								}
+							}else{
+								if(index<=0){
+									index= 1;
+								}
+							}
+								
+								index--
+								$lis.eq(index).stop().fadeIn(2000).siblings().fadeOut()
+						})
+				}
+			});
+			
+			//直接调用插件封装的方法
+			$('#drag').drag()
+			$('.slider').slider({
+				arrowName : 'arrow1',
+				loop : false
+			})
+		})
+	</script>
+</body>
+</html>

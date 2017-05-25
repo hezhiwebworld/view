@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				/*outline: none;*/
+				border: none;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var ainput = document.getElementsByTagName('input');
+				
+				var af = document.getElementById("iframe1")
+				
+				
+				function change(){
+					setTimeout(function(){
+						af.height = af.contentWindow.document.body.offsetHeight;
+					},200)
+				};
+				
+				change();
+				
+				
+				ainput[0].onclick = function(){
+					af.src = 'demo6.html'
+					change();
+				}
+				ainput[1].onclick = function(){
+					af.src = 'demo5.html'
+					change();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="" value="1111" />
+		<input type="button" id="" value="2222" />
+		<iframe src="demo5.html" width="" height="" id="iframe1" scrolling="no"></iframe>
+	</body>
+</html>

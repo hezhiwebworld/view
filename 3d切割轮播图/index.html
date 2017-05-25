@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .box{
+      position: relative;
+      width: 800px;
+      height: 360px;
+      border: 1px solid red;
+      margin:100px auto;
+    }
+	ul{
+		position: relative;
+	}
+ 	ul li{
+ 		width:100px;
+ 		height: 360px;
+ 		position: relative;
+ 		float: left;
+ 		font-size: 0;
+ 		transform-style: preserve-3d;
+ 		
+ 	}
+	ul li span{
+		display: inline-block;
+		width: 100px;
+		height: 360px;
+		background: green;
+		font-size: 60px;
+		position: absolute;
+		backface-visibility: hidden;
+		
+	}
+
+  	ul li span:nth-child(1){
+  		transform: translateZ(180px);
+  		background-color: rgba(255,0,0,.5);
+  	}
+  
+	ul li span:nth-child(2){
+		transform: translateY(-180px) rotateX(90deg);
+		background-color: rgba(255,255,0,.5);
+	}
+	ul li span:nth-child(3){
+		transform: translateZ(-180px) rotateX(180deg);
+		background-color: rgba(255,255,0,.5);
+	}
+	ul li span:nth-child(4){
+		transform: translateY(180px) rotateX(-90deg);
+		background-color: rgba(255,255,0,.5);
+	}
+	
+	
+	ul li span:nth-child(1){
+		background: url(images/1.jpg);
+	}
+	ul li span:nth-child(2){
+		background: url(images/2.jpg);
+	}
+	ul li span:nth-child(3){
+		background: url(images/3.jpg);
+	}
+	ul li span:nth-child(4){
+		background: url(images/4.jpg);
+	}
+	
+	
+	ul li:nth-child(2) span:nth-child(1){
+		background-position: -100px 0;
+	}
+	ul li:nth-child(3) span:nth-child(1){
+		background-position: -200px 0;
+	}
+	ul li:nth-child(4) span:nth-child(1){
+		background-position: -300px 0;
+	}
+	ul li:nth-child(5) span:nth-child(1){
+		background-position: -400px 0;
+	}
+	ul li:nth-child(6) span:nth-child(1){
+		background-position: -500px 0;
+	}
+	ul li:nth-child(7) span:nth-child(1){
+		background-position: -600px 0;
+	}
+	ul li:nth-child(8) span:nth-child(1){
+		background-position: -700px 0;
+	}
+	
+	/*第二张*/
+	ul li:nth-child(2) span:nth-child(2){
+		background-position: -100px 0;
+	}
+	ul li:nth-child(3) span:nth-child(2){
+		background-position: -200px 0;
+	}
+	ul li:nth-child(4) span:nth-child(2){
+		background-position: -300px 0;
+	}
+	ul li:nth-child(5) span:nth-child(2){
+		background-position: -400px 0;
+	}
+	ul li:nth-child(6) span:nth-child(2){
+		background-position: -500px 0;
+	}
+	ul li:nth-child(7) span:nth-child(2){
+		background-position: -600px 0;
+	}
+	ul li:nth-child(8) span:nth-child(2){
+		background-position: -700px 0;
+	}
+	
+	/*第三张*/
+	ul li:nth-child(2) span:nth-child(3){
+		background-position: -100px 0;
+	}
+	ul li:nth-child(3) span:nth-child(3){
+		background-position: -200px 0;
+	}
+	ul li:nth-child(4) span:nth-child(3){
+		background-position: -300px 0;
+	}
+	ul li:nth-child(5) span:nth-child(3){
+		background-position: -400px 0;
+	}
+	ul li:nth-child(6) span:nth-child(3){
+		background-position: -500px 0;
+	}
+	ul li:nth-child(7) span:nth-child(3){
+		background-position: -600px 0;
+	}
+	ul li:nth-child(8) span:nth-child(3){
+		background-position: -700px 0;
+	}
+	
+	/*第四张*/
+	ul li:nth-child(2) span:nth-child(4){
+		background-position: -100px 0;
+	}
+	ul li:nth-child(3) span:nth-child(4){
+		background-position: -200px 0;
+	}
+	ul li:nth-child(4) span:nth-child(4){
+		background-position: -300px 0;
+	}
+	ul li:nth-child(5) span:nth-child(4){
+		background-position: -400px 0;
+	}
+	ul li:nth-child(6) span:nth-child(4){
+		background-position: -500px 0;
+	}
+	ul li:nth-child(7) span:nth-child(4){
+		background-position: -600px 0;
+	}
+	ul li:nth-child(8) span:nth-child(4){
+		background-position: -700px 0;
+	}
+    .left,
+    .right{
+      position: absolute;
+      left:0;
+      top:50%;
+      width: 60px;
+      height: 80px;
+      margin-top:-40px;
+      background-color: red;
+      color:#fff;
+      line-height: 80px;
+      text-align: center;
+      font-size: 80px;
+      text-decoration: none;
+      font-family: "宋体";
+      opacity: 1;
+    }
+    .right{
+      left:auto;
+      right:0;
+    }
+    
+    /*ul li:nth-child(1){
+    	animation: rotate 1s ;
+    	animation-fill-mode:forwards;
+    }
+    
+    ul li:nth-child(2){
+    	animation: rotate .5s .5s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(3){
+    	animation: rotate  .5s 1s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(4){
+    	animation: rotate .5s 1.5s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(5){
+    	animation: rotate  .5s 2s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(6){
+    	animation: rotate  .5s 2.5s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(7){
+    	animation: rotate  .5s 3s;
+    	animation-fill-mode:forwards;
+    }
+    ul li:nth-child(8){
+    	animation: rotate  .5s 3.5s;
+    	animation-fill-mode:forwards;
+    }*/
+    @keyframes rotate{
+    	0%{
+    		transform: rotateX(0deg);
+    	}
+    	100%{
+    		transform: rotateX(90deg);
+    	}
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul>
+      <li class="list">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      
+      </li>
+      <li>
+       <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+       <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+      
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+      
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+      
+         <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+      
+         <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+      
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      
+    </ul>
+    <a class="left" href="#"><</a>
+    <a class="right" href="#">></a>
+  </div>
+
+			<script type="text/javascript">
+					var oRight = document.getElementsByClassName('right')[0];
+					var oLeft = document.getElementsByClassName('left')[0];
+					
+					//注册点击事件
+				
+					oRight.addEventListener('click',fn)
+					
+					oLeft.addEventListener('click',fn1)
+					
+					var index =0;
+					var flag = true;
+					function fn(){
+							if(!flag){
+								return
+							}else{
+								flag=false;
+							}
+							index++;
+							var ali = document.getElementsByTagName('li');
+							for (var i = 0;i < ali.length ;i++ ) {
+								ali[i].style.transform ="rotateX("+-90*index+"deg)"
+								ali[i].style.transition ="all 0.5s "+ i*.1+"s"
+								
+								ali[i].addEventListener('transitionend',function(){
+											flag=true;
+								})
+							}
+						
+							
+					}
+					
+					function fn1(){
+							index--
+							var ali = document.getElementsByTagName('li');
+							for (var i = 0;i < ali.length ;i++ ) {
+								ali[i].style.transform ="rotateX("+-90*index+"deg)"
+								ali[i].style.transition ="all 0.5s "+ i*.1+"s"
+							}
+					}
+					
+					
+			</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 560px;
+            height: 300px;
+            border: 1px solid red;
+            margin:100px auto;
+        }
+        ul{
+
+        }
+
+        li{
+            float: left;
+            width: 112px;
+            height: 300px;
+            /*border: 1px solid #000;*/
+            position: relative;
+            transform-style:preserve-3d; /*让子盒子保持3d效果*/
+
+            /*辅助*/
+            transform:rotateX(30deg) rotateY(-24deg);
+        }
+
+        span{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            font-size: 60px;
+            color:rgba(0,0,0,0.5);
+        }
+        
+        span:nth-child(1){
+            background-color: crimson;
+            transform:translateZ(150px);
+        }
+
+        span:nth-child(2){
+            background-color: greenyellow;
+            transform:translateY(-150px) rotateX(90deg);
+        }
+
+        span:nth-child(3){
+            background-color: darkcyan;
+            transform:translateZ(-150px) rotateX(180deg);
+        }
+
+        span:nth-child(4){
+            background-color: coral;
+            transform:translateY(150px) rotateX(-90deg);
+        }
+
+        /*规律：所有li的同一个span 是同一张背景图片 */
+        
+        li span:nth-child(1){
+            background-image: url(images/1.jpg);
+        }
+
+        li span:nth-child(2){
+            background-image: url(images/2.jpg);
+        }
+
+
+        li span:nth-child(3){
+            background-image: url(images/3.jpg);
+        }
+
+        li span:nth-child(4){
+            background-image: url(images/4.jpg);
+        }
+
+        /*规律2:同一个li所有的span 背景定位是一样的*/
+        li:nth-child(2) span{
+            background-position: -112px 0;
+        }
+
+        li:nth-child(3) span{
+            background-position: -224px 0;
+        }
+
+        li:nth-child(4) span{
+            background-position: -336px 0;
+        }
+
+        li:nth-child(5) span{
+            background-position: -448px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </li>
+            <li>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </li>
+            <li>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </li>
+            <li>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </li>
+            <li>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

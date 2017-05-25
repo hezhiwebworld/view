@@ -1,0 +1,21 @@
+body,p,div,h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font: 16px "microsoft yahei";
+}
+ul,ol{
+	list-style: none;	
+}
+b,u,i,s,a{
+	text-decoration: none;
+}
+.center{
+	width: 1050px;
+	margin: 0 auto;
+}
+.content {
+  width: 1000px;
+  margin: 0 auto;
+}

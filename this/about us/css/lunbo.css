@@ -1,0 +1,108 @@
+/*/!*关于我们的轮播图部分 S*!/*/
+/*#about-report {*/
+    /*position: relative;*/
+    /*height:500px;*/
+    /*border-bottom:1px solid #eee;*/
+/*}*/
+/*#about-report h2 {*/
+    /*text-align:center;*/
+    /*font-size:40px;*/
+    /*font-weight:lighter;*/
+    /*font-family:"微软雅黑";*/
+    /*padding-top:60px;*/
+/*}*/
+/*#about-report h2 span {*/
+    /*color: #00b4ff;*/
+/*}*/
+/*#about-report #box {*/
+    /*height:270px;*/
+    /*padding-top: 100px;*/
+    /*/!*background-color: red;*!/*/
+    /*/!*position:relative;*!/*/
+/*}*/
+/*#about-report #box #slider {*/
+    /*height:250px;*/
+    /*width:1000px;*/
+    /*/!*background-color: yellowgreen;*!/*/
+    /*position:relative;*/
+    /*margin:0 auto;*/
+    /*overflow:hidden;*/
+/*}*/
+/*#about-report #box #slider ul li {*/
+    /*position:absolute;*/
+    /*width:218px;*/
+    /*height:108px;*/
+    /*border:1px solid #ddd;*/
+    /*margin:60px 10px 0;*/
+    /*/!*float:left;*!/*/
+    /*overflow:hidden;*/
+/*}*/
+/*#about-report #box #slider ul li>a {*/
+    /*width:108px;*/
+    /*height:220px;*/
+    /*text-align:center;*/
+    /*vertical-align:middle;*/
+/*}*/
+/*#about-report #box #slider ul li>a>img {*/
+    /*width:160px;*/
+    /*left:50%;*/
+    /*margin-left:-80px;*/
+    /*position:absolute;*/
+/*}*/
+/*#about-report #box #slider ul li h3{*/
+    /*text-align: center;*/
+    /*font-size: 16px;*/
+    /*font-weight: 700;*/
+    /*margin: 128px auto 20px;*/
+    /*color: #444;*/
+    /*width: 320px;*/
+    /*overflow: hidden;*/
+    /*height: 18px;*/
+/*}*/
+/*#about-report #box #slider ul li h3 a {*/
+    /*color:#444;*/
+/*}*/
+/*#about-report #box #slider ul li p{*/
+    /*font-size: 14px;*/
+    /*padding: 0 10px;*/
+    /*line-height: 1.4;*/
+    /*color: #777;*/
+    /*height: 56px;*/
+    /*width: 328px;*/
+    /*overflow: hidden;*/
+/*}*/
+/*#about-report #box #slider ul .current {*/
+    /*width:348px;*/
+    /*height:238px;*/
+    /*border:1px solid #ddd;*/
+    /*box-shadow:0 0 10px #aaa;*/
+    /*margin-top:0px;*/
+/*}*/
+/*#about-report #box #arrow a.prev{*/
+    /*position: absolute;*/
+    /*padding: 0 10px;*/
+    /*width: 40px;*/
+    /*height: 230px;*/
+    /*background-color: #fff;*/
+    /*left: 143px;*/
+    /*top: 213px;*/
+    /*background-image: url(../imgs/ic_arrow_left.png);*/
+    /*background-size: 40px auto;*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*#about-report #box #arrow a.next{*/
+    /*position: absolute;*/
+    /*padding: 0 10px;*/
+    /*width: 40px;*/
+    /*height: 230px;*/
+    /*background-color: #fff;*/
+    /*background-size: 40px auto;*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    /*right: 143px;*/
+    /*/!*left: auto;*!/*/
+    /*top:213px;*/
+    /*background-image: url(../imgs/ic_arrow_right.png);*/
+/*}*/
+/*/!*关于我们的轮播图部分 E *!/*/

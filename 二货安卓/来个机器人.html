@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 100%;
+				background: white;
+			}
+			#box{
+				height: 600px;
+				width: 600px;
+				background: white;
+				
+				position: absolute;
+				left: 0;
+				top:0;
+				animation: lin1 3s linear infinite;
+				
+			}
+			.half_circle{
+				width: 200px;
+				height: 100px;
+				background: green;
+				border-radius: 85px 85px 0 0;
+				position: absolute;
+				top: 100px;
+				left: 200px;
+				
+			}
+			.dot{
+				width: 20px;
+				height: 20px;
+				background: white;
+				border-radius: 100%;
+				margin: 0 auto;
+				position: absolute;
+			}
+			
+			.hand{
+				width: 40px;
+				height:150px;
+				border-radius: 40px 40px 40px 40px;
+				background: green;
+				position: absolute;
+			}
+			.eat{
+				width: 200px;
+				height: 180px;
+				background: green;
+				position: absolute;
+				top:0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin:auto;
+				border-radius: 0px 0px  30px 30px;
+				
+			}
+			.zui{
+				width: 60px;
+				height: 30px;
+				background: green;
+				border: 10px solid white;
+				border-top-color: green;
+				border-left-color: green;
+				border-right-color: green;
+				border-radius: 0px 0px 30px 30px;
+				
+			}
+			
+			.l{
+				left: 150px;
+				top: 210px;
+				z-index: 20;
+				animation: lgun 1s linear infinite;
+			}
+			.r{
+				left: 410px;
+				top: 210px;
+				z-index: 20;
+				animation: lgun 1s linear infinite;
+			}
+			.fl{
+				left: 240px;
+				top: 320px;
+			}
+			.fr{
+				left: 320px;
+				top: 320px;
+			}
+			
+			/*眼睛*/
+			.l1{
+				top:40px;
+				left: 50%;
+				margin-left: -38px;
+				z-index: 2;
+			}
+			.l2{
+				top:40px;
+				left: 50%;
+				margin-left: 15px;
+				z-index: 2;
+			}
+			.zui{
+				position: absolute;
+				left: 50%;
+				margin-left: -40px;
+				top:40px;
+				
+			}
+			
+			@keyframes lgun{
+				0%{
+					transform: rotate(0deg);
+					transform-origin: 20px 0px;
+				}
+				25%{
+					transform: rotate(90deg);
+					transform-origin: 20px 0px;
+				}
+				50%{
+					transform: rotate(180deg);
+					transform-origin: 20px 0px;
+				}
+				75%{
+					transform: rotate(270deg);
+					transform-origin: 20px 0px;
+				}
+				100%{
+					transform: rotate(360deg);
+					transform-origin: 20px 0px;
+				}
+			}
+			#box p{
+				position: absolute;
+				font-size: 80px;
+				text-align: center;
+				font-weight: 900;
+				top: -80px;
+				text-shadow: -2px -2px 2px #FFF,2px 2px 2px #000;
+			}
+			
+			@keyframes lin1{
+				0%{
+					left:0;
+					top:0;
+				}
+				25%{
+					left:300px;
+					top:300px;
+				}
+				50%{
+					left:600px;
+					top:0;
+				}
+				75%{
+					left:300px;
+					top:300px;
+				}
+				100%{
+					left:0;
+					top:0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--<p>周老板的大安卓</p>-->
+			<div class="half_circle">
+				<div class="dot l1">
+					
+				</div>
+				<div class="dot l2">
+					
+				</div>
+				<div class="zui">
+					
+				</div>
+			</div>
+			<div class="eat">
+				
+			</div>
+			<div class="hand l">
+				
+			</div>
+			<div class="hand r">
+				
+			</div>
+			
+			<div class="hand fl">
+				
+			</div>
+			<div class="hand fr">
+				
+			</div>
+		</div>
+	</body>
+</html>

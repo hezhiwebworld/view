@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery动态回到顶部特效</title>
+<style >
+#goTopBtn {position: fixed;line-height:36px;width:36px;bottom:35px;height:36px;cursor:pointer;display:none;
+background:red;}
+body{
+	height: 2000px;
+}
+</style>
+</head>
+<body>
+
+<br/>
+<p style="text-align:center;font-family:Georgia, 'Times New Roman', Times, serif;font-size:24px;font-weight:bold;">***，how are you。
+<br/>Just do what you want do!!!</p>
+
+<div id="goTopBtn">111</div>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+ $(window).scroll(function(){
+   var sc=$(window).scrollTop();
+   var rwidth=$(window).width()
+   if(sc>0){
+    $("#goTopBtn").css("display","block");
+    $("#goTopBtn").css("left",(rwidth-36)+"px")
+   }else{
+   $("#goTopBtn").css("display","none");
+   }
+ })
+ $("#goTopBtn").click(function(){
+   var sc=$(window).scrollTop();
+   $('body,html').animate({scrollTop:0},500);
+ })
+</script>
+</body>
+</html>

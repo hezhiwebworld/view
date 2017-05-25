@@ -1,0 +1,111 @@
+
+
+/*/!*加入我们基本框架*!/*/
+/*.join_us{*/
+	/*background: url(../imgs/img_about_bg2.jpg) 0/cover;*/
+	/*height: 610px;*/
+	/*overflow: hidden;*/
+	/*position: relative;*/
+/*}*/
+/*.join_us h2{*/
+	/*font:normal 40px "microsoft yahei";*/
+	/*color: white;*/
+	/*text-align: center;*/
+	/*margin-top: 60px;*/
+/*}*/
+/*.join_us .j_us{*/
+	/*color: #00b4ff;*/
+/*}*/
+/*.join_us .join_change{*/
+	/*position: relative;*/
+	/*z-index: 999;*/
+/*}*/
+/*.join_us .join_change .j_email{*/
+	/*font: normal 16px "microsoft yahei";*/
+	/*color: white;*/
+	/*width: 250px;*/
+	/*position: relative;*/
+	/*left:390px;*/
+	/*text-align: center;*/
+	/*margin-top: 20px;*/
+/*}*/
+/*/!*设置邮箱下的下划线*!/*/
+/*.join_us .e_line{*/
+	/*/!*width: 235px;*!/*/
+	/*width: 0px;*/
+	/*height: 1px;*/
+	/*position: absolute;*/
+	/*/!*top:140px;*!/*/
+	/*left: 520px;*/
+	/*background-color: white;*/
+/*}*/
+/*/!*列表样式*!/*/
+/*.join_us .j_list li{*/
+	/*float: left;*/
+	/*cursor: pointer;*/
+	/*height: 150px;*/
+	/*width: 300px;*/
+	/*margin:20px 30px 0 0;*/
+	/*color: white;*/
+	/*text-align: center;*/
+	/*line-height: 130px;*/
+	/*position: relative;*/
+	/*background-color: rgba(255,255,255,.2);*/
+/*}*/
+/*.join_us .j_list .circle_img{*/
+	/*height: 68px;*/
+	/*position: absolute;*/
+	/*top: 23px;*/
+	/*left: 116px;*/
+/*}*/
+/*.join_us .j_list li p{*/
+	/*width: 100%;*/
+	/*font: 14px "microsoft yahei";*/
+	/*position: absolute;*/
+	/*top: 110px;*/
+	/*text-align: center;*/
+/*}*/
+/*/!*遮罩层*!/*/
+/*.join_us .j_bg{*/
+	/*/!*height: 610px;*!/*/
+	/*height:0px;*/
+	/*width: 100%;*/
+	/*background-color: rgba(0,0,0,.5);*/
+	/*color: #fff;*/
+	/*text-align: left;*/
+	/*position: absolute;*/
+	/*top: 305px;*/
+	/*left: 0;*/
+	/*z-index: 2;*/
+	/*display: none;*/
+/*}*/
+/*.join_us .j_bg .bg_text{*/
+	/*display: none;*/
+	/*margin-top: 160px;*/
+	/*margin-left: 300px;*/
+/*}*/
+/*.join_us .j_bg .bg_text p{*/
+	/*font-size: 14px;*/
+	/*margin-top: 10px;*/
+/*}*/
+/*.join_us .j_bg .bg_text dt{*/
+	/*font-size: 16px;*/
+	/*margin-top: 0px;*/
+/*}*/
+/*.join_us .j_bg .bg_text dd{*/
+	/*font-size: 14px;*/
+	/*margin-top: 10px;*/
+/*}*/
+/*.join_us .j_bg .bg_close{*/
+	/*width: 20px;*/
+	/*height: 20px;*/
+	/*font-size: 20px;*/
+	/*text-align: center;*/
+	/*line-height: 20px;*/
+	/*background-color: rgba(0,0,0,.5);*/
+	/*color: white;*/
+	/*position: absolute;*/
+	/*top: 100px;*/
+	/*right: 100px;*/
+	/*cursor: pointer;*/
+/*}*/

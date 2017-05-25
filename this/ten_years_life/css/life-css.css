@@ -1,0 +1,616 @@
+/*头部*/
+.life_head {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+}
+.life_head .head_fl a {
+    display: inline-block;
+    width: 80px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    margin-left: 31px;
+    color: #848484;
+    font-size: 13px;
+}
+.life_head .head_fl .discover {
+    border-bottom: 2px solid #00b4ff;
+    margin: 0;
+    color: #333;
+
+}
+.life_head .head_fl a:hover {
+    background-color: #f7f7f7;
+    color:#333;
+}
+.life_head .life_logo {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%) ;
+}
+.life_head .life_logo img{
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+}
+.life_head .life_head_login {
+    margin-right: 44px;
+    margin-top: 8px;
+}
+.life_head .life_head_login a {
+    display: inline-block;
+    height: 34px;
+    width: 70px;
+    line-height: 34px;
+    text-align: center;
+    color: #444444;
+    cursor: pointer;
+    font-size: 13px;
+
+}
+.life_head_login a.life_head_login_btn {
+    background-color: #00b4ff;
+    border-radius: 3px;
+    color: #ffffff;
+}
+/*中间大图背景区域*/
+.life_mid {
+    height: 250px;
+    width: 100%;
+    background:url("../images/life_bgimg.jpg") no-repeat 0 -740px;
+    background-size: 100%;
+    overflow: hidden;
+}
+.life_mid .close_btn {
+    margin: 20px 20px 0 0;
+}
+.life_mid .close_btn .iconfont{
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+.life_mid h1 {
+    font: normal 400 38px "microsoft YaHei";
+    text-align: center;
+    color: #fff;
+    margin-top: 56px;
+}
+.life_mid .data {
+    height: 51px;
+    width: 204px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.life_mid .data .data_left {
+    margin-right: 48px;
+}
+.life_mid .data i{
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    margin-top: 13px;
+    line-height: 2;
+    background-color: #fff;
+}
+.life_mid .data span {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+
+}
+.life_mid .data p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+/*项目展示区域*/
+.lifePage {
+    display: none;
+}
+.content {
+    /*height: 600px;*/
+    width: 100%;
+    background-color: #f4f4f4;
+}
+.content .subnav {
+    background-color: white;
+    margin: 20px 0 29px 0;
+
+}
+.content .subnav a {
+    display: inline-block;
+    width: 333px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #333333;
+    font-size: 13px;
+}
+.content .subnav a:hover {
+    color: #00b4ff;
+}
+.content .subnav a.dream {
+    color: #00b4ff;
+    height: 38px;
+    border-bottom: 2px solid #00b4ff;
+}
+/*图片展示区域*/
+/*第一行图片*/
+.content .dream_card {
+    height: 250px;
+    width: 1000px;
+    margin-bottom: 20px;
+}
+.content .dream_card .dream_card_l {
+    height: 250px;
+    width: 320px;
+    background:url("../images/dream_card_2.png");
+    position: relative;
+}
+
+.content .dream_card .dream_card_l {
+    position: relative;
+    border-radius: 10px;
+    /*下面代码配合js代码使用*/
+    overflow: hidden;
+}
+.content .dream_card .dream_card_l .iconfont {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #16baff;
+    font-size: 30px;
+
+
+}
+.content .dream_card .dream_card_l .dream_card_l_msg a {
+    display: block;
+    height: 250px;
+    width: 320px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 1;
+    color: white;
+    margin-top: -250px;
+    border-radius: 10px;
+}
+.content .dream_card .dream_card_l .dream_card_l_msg a p {
+    width: 320px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 61px;
+}
+.content .dream_card .dream_card_l .dream_card_l_msg a i {
+    display: block;
+    width: 320px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.content .dream_card .dream_card_l .dream_card_l_msg a span {
+    display: block;
+    width: 320px;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+
+}
+.content .dream_card .dream_card_l .dream_card_l_msg a span:hover {
+    color: #00b4ff;
+}
+
+.content .dream_card .dream_card_l .details {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 320px;
+    height: 112px;
+    background-color: white;
+    border-radius: 10px;
+}
+.content .dream_card .dream_card_l .details .words {
+    margin: 19px 0 26px 19px;
+    color: #666;
+    font-size: 14px;
+}
+.content .dream_card .dream_card_l .details .data {
+    width: 106px;
+}
+.content .dream_card .dream_card_l .details .data p{
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+.content .dream_card .dream_card_l .details .data span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+}
+/*第二行图片，修该背景图片*/
+.content .dream_card .dream_card_c {
+    margin: 0 20px;
+    background:url("../images/dream_card_2.png");
+}
+.content .dream_card .dream_card_r {
+    background:url("../images/dream_card_2.png");
+    background-position: 0 -22px;
+}
+.content .dream_card .dream_card_l_img {
+    background:url("../images/dream_card_2.png");
+}
+.content .dream_card .dream_card_c_img {
+    background:url("../images/dream_card_2.png") no-repeat;
+    background-position: 0 -30px;
+
+}
+.content .dream_card .dream_card_r_img {
+    background:url("../images/dream_card_2.png");
+}
+/*梦想栏，图片替换*/
+
+
+/*更多选项*/
+.content .more {
+    height: 30px;
+    width: 100%;
+    border-bottom: 2px solid #16baff;
+}
+.content .more a {
+    float: right; 
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    background-color: #16baff;
+    line-height: 30px;
+    font-size: 14px;
+
+}
+.content .more a:hover {
+    color: #404040;
+}
+/*底部区域*/
+
+
+/*留言板开始*/
+.content .lifePage .messageboard ul li{
+    width: 600px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+.content .lifePage .messageboard ul li .user {
+    height: 38px;
+    margin-top: 15px;
+}
+.content .lifePage .messageboard ul li .user .userlogo {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background:url("../images/userlogo.png") no-repeat;
+    background-size: 38px 38px;
+    margin-left: 20px;
+}
+
+.content .lifePage .messageboard ul li .user .username {
+    display: inline-block;
+    margin: 4px 0 0 15px;
+}
+.content .lifePage .messageboard ul li .user .username a {
+    display: block;
+    color: #0099ff;
+
+}
+.content .lifePage .messageboard ul li .user .username i {
+    color: #999;
+    font-size: 11px;
+}
+.content .lifePage .messageboard ul li .user .headline a {
+    display: inline-block;
+    height: 30px;
+    padding:0 15px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin: 3px 20px 0 0;
+    color: #0099ff;
+    border: 1px solid #eee;
+}
+.content .lifePage .messageboard ul li .userwords {
+    width: 560px;
+    margin: 35px 0 0 20px;
+}
+.content .lifePage .messageboard ul li .like {
+    height: 30px;
+    border-top: 2px solid #f6f5f6;
+    margin-top: 32px;
+}
+.content .lifePage .messageboard ul li .like .iconfont {
+    display: inline-block;
+    height: 30px;
+    margin: 0 38px 0 27px;
+    color: #0099ff;
+    line-height: 30px;
+    font-size: 24px;
+
+}
+/*替换所有用户头像*/
+.content .lifePage .messageboard ul li:nth-child(1) .user .userlogo {
+    background:url("../images/userimg1.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(2) .user .userlogo {
+    background:url("../images/userimg2.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(3) .user .userlogo {
+    background:url("../images/userimg3.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(4) .user .userlogo {
+    background:url("../images/userimg4.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(5) .user .userlogo {
+    background:url("../images/userimg5.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(6) .user .userlogo {
+    background:url("../images/userimg6.png") no-repeat;
+    background-size: 38px 38px;
+}
+
+.content .lifePage .messageboard ul li:nth-child(7) .user .userlogo {
+    background:url("../images/userimg7.png") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(8) .user .userlogo {
+    background:url("../images/userimg8.jpg") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(9) .user .userlogo {
+    background:url("../images/userimg9.jpg") no-repeat;
+    background-size: 38px 38px;
+}
+.content .lifePage .messageboard ul li:nth-child(10) .user .userlogo {
+    background:url("../images/userimg10.jpg") no-repeat;
+    background-size: 38px 38px;
+}
+
+
+
+
+
+/*首页底部*/
+#index_bottom {
+    height: 381px;
+    width: 100%;
+    background-color: #23353c;
+    overflow: hidden;
+    margin-top: 50px;
+}
+/*回到顶部*/
+#index_bottom #arrow {
+    height: 50px;
+    width: 40px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    cursor: pointer;
+    background-color: #e2e2e2;
+    /*display: none;*/
+}
+#index_bottom #arrow s {
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    top: 50px;
+    left: -4px;
+    width: 50px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    display: none;
+}
+#index_bottom #arrow .arrowt {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: -10px;
+    border-top:15px transparent solid;
+    border-left:15px transparent solid;
+    border-right:15px transparent solid;
+    border-bottom:15px #aaa solid;
+
+
+}
+#index_bottom #arrow .arrowb {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 20px; ;
+    height: 20px;
+    width: 10px;
+    background-color: #aaa;
+}
+/*回到顶部结束*/
+#index_bottom .guide {
+    height: 184px;
+    margin-top: 30px;
+    background-color: #23353c;
+}
+
+#index_bottom .guide-logo {
+    width: 195px;
+    height: 184px;
+}
+#index_bottom .guide-logo h3 {
+    height: 36px;
+    color: #fff;
+    font: normal 400 26px/36px "microsoft YaHei";
+    background: url("../images/logo.png") no-repeat;
+    background-size: 39px 36px;
+    padding-left: 49px;
+}
+#index_bottom .guide-logo p {
+    color: #aaa;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 20px;
+}
+#index_bottom .guide_aboutme {
+    width: 65px;
+    margin-left: 55px;
+}
+#index_bottom .guide_aboutme h4 {
+    color: #fff;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+}
+#index_bottom .guide_aboutme ul li {
+    height: 30px;
+    line-height: 30px;
+}
+#index_bottom .guide_aboutme ul li a {
+    font-size: 13px;
+    color: #aaa;
+    padding: 0;
+    margin: 0;
+}
+#index_bottom .guide_aboutme ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+#index_bottom .giude_media,.download_app {
+    margin-left: 185px;
+}
+#index_bottom .download_app h4 {
+    color: #fff;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+}
+#index_bottom .download_app .app a {
+    display: block;
+    height: 35px;
+    width: 113px;
+    border: 1px solid #00b4ff;
+    margin-top: 9px;
+    border-radius: 5px;
+    color: #00b4ff;
+    line-height: 35px;
+    text-align: center;
+}
+#index_bottom .download_app .app a:hover {
+    background-color: #00b4ff;
+    color: white;
+}
+#index_bottom .download_app .iconfont {
+    font-size: 18px;
+}
+#index_bottom .download_app .qrcode {
+    margin-left: 10px;
+}
+#index_bottom .download_app .qrcode img {
+    height: 81px;
+    width: 81px;
+    margin-top: 10px;
+}
+#index_bottom  .footer {
+    height: 300px;
+    margin-top: 50px;
+}
+#index_bottom .footer .copyrigth {
+    text-align: center;
+    color: #606d72;
+    font-size: 10px;
+    margin-top: 65px;
+}
+#index_bottom .footer .copyrigth a {
+    color: #606d72;
+    font-size: 11px;
+}
+#index_bottom .footer .copyrigth span {
+    color: #919a9e;
+    font-size: 13px;
+}
+#index_bottom .footer .paiyun {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 12px;
+}
+#index_bottom .footer .paiyun .oneapm img {
+    height: 45px;
+    width: 142px;
+}
+/*底部结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

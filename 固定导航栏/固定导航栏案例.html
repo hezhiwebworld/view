@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 1000px;
+            margin-top: 10px;
+
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="top" id="topPart">
+    <img src="images/top.png" alt=""/>
+</div>
+<div class="nav" id="navBar">
+    <img src="images/nav.png" alt=""/>
+</div>
+<div class="main" id="mainPart">
+    <img src="images/main.png" alt=""/>
+</div>
+<script src="common.js"></script>
+<script>
+
+    function getScroll() {
+        return{
+            left: window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft || 0,
+            top: window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop || 0
+        };
+    }
+
+   	window.onscroll = function (){
+   		var oTop = getScroll().top;
+   		var oTopPart= document.getElementById("topPart")
+   		var oNavBar = document.getElementById("navBar")
+   		var oMainPart =document.getElementById("mainPart")
+   		if(oTop>=oTopPart.offsetHeight){
+   			oNavBar.className ="nav fixed"
+   			oMainPart.style.marginTop = oNavBar.offsetHeight +10+'px';
+   		}else{
+   			oNavBar.className ="nav"
+   			oMainPart.style.marginTop =10+'px';
+   		}
+   	}
+</script>
+</body>
+</html>

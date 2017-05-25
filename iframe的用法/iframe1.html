@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function (){
+				var obtn =document.getElementById("btn");
+				obtn.onclick = function(){
+					//chrome 出于安全考虑，不支持，只能访问服务器的上文件
+					//操作父层的元素
+					window.parent.document.getElementById('e').style.color= 'red';
+					//操作最顶级的元素
+					window.top.document.getElementById('e').style.color= 'red';
+				alert(1)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="改变" />
+	</body>
+</html>

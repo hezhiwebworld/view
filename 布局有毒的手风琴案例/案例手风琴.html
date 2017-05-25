@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        ul {
+            list-style: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        div {
+            width: 1150px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 240px;
+            height: 400px;
+            float: left;
+        }
+
+        div ul {
+            width: 1300px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src="ownmove1.2.1.js"></script>
+
+<script type="text/javascript">
+	var olist = document.getElementById("list");
+	var ali = olist.getElementsByTagName('li');
+
+	for (var i=0;i<ali.length;i++) {
+	
+		ali[i].style.background = "url(images/"+(i+1)+".jpg)"
+		ali[i].onmouseover = overhandle;
+		ali[i].onmouseout = outhandle;
+	}
+	
+	function overhandle(){
+		for (var i=0; i<ali.length;i++) {
+			bufferMove(ali[i],{'width':100})
+		}
+		bufferMove(this,{'width':800})
+	}
+	function outhandle(){
+		for (var i=0;i<ali.length;i++) {
+			bufferMove(ali[i],{'width':240})
+		}
+	}
+</script>
+
+
+</body>
+</html>

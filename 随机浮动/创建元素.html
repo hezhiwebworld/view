@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="button" id="btn" value="创建元素" />
+		<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			
+			btn.onclick= fn;
+			function fn(){
+				var  btn = document.getElementById('btn');
+				for (var i =0;i<4;i++) {
+					var img = document.createElement('img');
+					img.src = "wxl.jpg"
+					img.style.position = "absolute"
+					var dy = parseInt(Math.random()*20+i*150);
+					 img.speed = parseInt(Math.random()*10);
+					
+					img.style.top = dy+'px';
+					img.style.left = document.documentElement.clientWidth + 'px';
+					document.body.appendChild(img)
+				}
+				
+				var oimg = document.getElementsByTagName('img');
+				for(var i =0;i<oimg.length;i++){
+					var speed = parseInt(Math.random()*5+5);
+					move(oimg[i],speed)
+				}
+				function move(obj,speed){
+					clearInterval(obj.timer);
+					obj.timer = setInterval(function(){
+						if(obj.offsetLeft<-200){
+							clearInterval(obj.timer);
+							document.body.removeChild(obj);
+						}else{
+							obj.style.left = obj.offsetLeft-speed+'px';
+						}
+						
+						
+					},30)
+				}
+				
+			}
+			
+			setInterval(function(){
+				fn()
+			},2000)
+		</script>
+	</body>
+</html>

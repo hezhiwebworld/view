@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 2000px;
+				background-color: darkgreen;
+			}
+		</style>
+		<script src="getClient.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+		
+	</body>
+	<script type="text/javascript">
+			
+			
+			function resizehandle(){
+				var dx = document.documentElement.clientWidth
+				var w = getClinet().width;
+				if(w>1000){
+					 document.body.style.background ="red";
+				}else if(w>760){
+					document.body.style.background ="yellow";
+				}else{
+					document.body.style.background ="blue";
+				}
+			}
+			resizehandle();
+			window.onresize = resizehandle;
+		</script>
+</html>

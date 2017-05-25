@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>lightSlider Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <style>
+    ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .demo .item {
+        margin-bottom: 60px;
+    }
+    
+    .content-slider li {
+        background-color: #ed3020;
+        text-align: center;
+        color: #FFF;
+    }
+    
+    .content-slider h3 {
+        margin: 0;
+        padding: 70px 0;
+    }
+    
+    .demo {
+        width: 800px;
+    }
+    </style>
+    <script src="../../案例/jquery-1.11.1.min.js"></script>
+    <script src="lightslider.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // 创建HTML结构 --- start ----
+        var imgsSrc = ["cS-1.jpg", "cS-2.jpg", "cS-3.jpg", "cS-4.jpg", "cS-5.jpg", "cS-6.jpg", "cS-7.jpg", "cS-8.jpg", "cS-9.jpg", "cS-10.jpg", "cS-11.jpg", "cS-12.jpg", "cS-13.jpg", "cS-14.jpg", "cS-15.jpg"],
+            slideArr = [];
+
+        $.each(imgsSrc, function(i, v) {
+            var tempStr =
+                '<li data-thumb="img/thumb/' + v + '">' +
+                '<img src="img/' + v + '" />' +
+                '</li>';
+
+            slideArr.push(tempStr);
+        });
+        
+        $("#image-gallery").html(slideArr.join(""));
+        // 创建HTML结构 --- end ----
+        
+        $('#image-gallery').lightSlider({
+            gallery: true,          // 预览小图
+            item: 1,                // 每次展示图片个数
+            thumbItem: 3,          // 底部展示个数
+            easing: 'linear',       // 动画效果
+            speed: 1000,             // 切换速度
+            pause: 2000,            // 停留时间
+            auto: true,             // 自动播放
+            loop: true,             // 循环播放
+            keyPress: true,         // 支持按键
+            onSliderLoad: function() {
+                $('#image-gallery').removeClass('cS-hidden');
+            }
+        });
+
+        // http://sachinchoolur.github.io/lightslider/examples.html
+    });
+    </script>
+</head>
+
+<body>
+    <div class="demo">
+        <div class="item">
+            <div class="clearfix" style="max-width:474px;">
+                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

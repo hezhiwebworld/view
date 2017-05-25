@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#case {
+    width: 1349px;
+    height: 900px;
+    padding-top: 50px;
+    position: relative;
+    margin: 0 auto;
+    /*background: url("../images/aboutbgg.jpg");*/
+
+}
+#case .head {
+    text-align: center; 
+    line-height:50px;
+    margin-bottom: 50px;
+    font-size:40px;
+}
+#case .ourcase{
+    /*width: 539px;*/
+    width: 0;
+    height: 78px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    opacity: 0.7;
+}
+
+
+#case .casebox{
+    width: 1105px;
+    /*height: 556px;*/
+    margin: 0 auto;
+}
+#case ul{
+    width: 1105px;
+    height: 415px;
+    /*margin: 0 auto;*/
+    margin-bottom: 20px;
+    /*overflow: hidden;*/
+
+    /*background-color: #ffb21a;*/
+}
+#case li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+#case .brand a{
+    display: block;
+    width: 216px;
+    height: 135px;
+    /*position: relative;*/
+    margin: 0 5px 5px 0;
+    text-decoration: none;
+}
+#case .caseImg{
+    width: 216px;
+    height: 135px;
+    /*background-color: #46fff8;*/
+}
+#case .caseImg2{
+    width: 319px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-top: -27px;
+    margin-left: -41px;
+    z-index: 3;
+    display: none;
+    border: 1px solid white;
+    background-color: #46fff8;
+}
+#case .info{
+    display: none;
+    background-image: url("../images/40.jpg");
+}
+.vertical .info{
+    width: 0;
+    height:  135px;
+    margin: 0 auto;
+}

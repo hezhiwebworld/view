@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+div,
+span,
+ul,
+ol,
+li,
+p,
+body,
+input,
+form,
+dl,
+dt,
+th,
+tr,
+a,
+td,
+blockquote,
+fieldset,
+textarea,
+legend,
+hr,
+i,
+pre{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: normal 400 12px "microsoft YaHei";
+    background-color: #f4f4f4;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+

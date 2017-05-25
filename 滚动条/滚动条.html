@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onscroll = function(){
+				var odemo = document.getElementById('demo');
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//				 odemo.style.top = scrollTop + (document.documentElement.clientHeight -odemo.offsetHeight)/2 +'px';
+				var  t = scrollTop + (document.documentElement.clientHeight -odemo.offsetHeight)/2 ;
+				move(t)
+				 
+			
+				
+				
+			}
+			var timer = null;    //定时器的位置问题是个大坑
+			function move(t){
+					
+					var odemo = document.getElementById('demo');
+					clearInterval(timer)
+					timer = setInterval(function(){
+						
+									//目标点需要取整 t
+									t = Math.ceil(t)
+						var speed = (t-odemo.offsetTop)/5;
+						
+						speed = speed>0 ? Math.ceil(speed) :Math.floor(speed);
+						
+						if(parseInt(odemo.style.top) == t){
+							clearInterval(timer)
+						}else{
+							odemo.style.top = odemo.offsetTop+speed +'px';
+						}
+				},30)
+				
+			}
+			
+			
+		</script>
+	</head>
+	<body style="height: 2000px;">
+		<div id="demo"></div>
+	</body>
+</html>

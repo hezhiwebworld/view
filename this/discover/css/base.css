@@ -1,0 +1,50 @@
+/*样式初始化*/
+body,div,p,span,ul,li,ol,dl,dt,dd,img,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+body{
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #999;
+    background: #f4f4f4;
+}
+img,input{
+    border:0;
+    vertical-align: middle;
+    outline: none;
+}
+i,s,b,em,strong{
+    font-style: normal;
+    font-weight: normal;
+}
+/*定义一些常用的公用的类*/
+.clear:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+/*IE兼容*/
+.clear{
+    zoom: 1;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*版心*/
+.w,.content{
+    width: 995px;
+    margin:0 auto;
+}
+

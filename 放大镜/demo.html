@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#small{
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			#large{
+				width: 250px;
+				height: 250px;
+				overflow: hidden;
+				position: relative;
+				left: 300px;
+				top:-100px;
+			}
+			#large img{
+				position: absolute;
+			}
+			#mark{
+				width: 50px;
+				height: 50px;
+				opacity: 0.5;
+				background: gray;
+				position: absolute;
+			}
+			#layer{
+				width: 100%;
+				height: 100%;
+				background: white;
+				opacity: 0;
+				filter: alpha(opacity:0);
+				display: block;
+				z-index: =2;
+				position: absolute;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				
+				var osmall = document.getElementById("small");
+				var omark = document.getElementById("mark")
+				var olarge = document.getElementById("large")
+				var osimg = document.getElementById('simg')
+				var olimg = document.getElementById('limg')
+				var olayer = document.getElementById("layer")
+				var o
+				olayer.onmouseover = function(){
+					
+					omark.style.display = "block";
+					
+					
+				}
+				
+				olayer.onmousemove = function(ev){
+						var scrollTop = document.documentElement.scrollTop ||document.body.scrollTop;
+						var ev = ev ||event;
+						var dx = ev.clientX-osimg.offsetLeft -omark.offsetWidth/2;
+						var dy = ev.clientY +screenTop -osimg.offsetTop-omark.offsetHeight/2;
+						
+						if(dx<0){
+							dx =0;
+						}else if(dx>olayer.offsetWidth-omark.offsetWidth){
+							dx =olayer.offsetWidth-omark.offsetWidth;
+						}
+						if(dy<0){
+							dy =0;
+						}else if(dy>olayer.offsetHeight-omark.offsetHeight){
+							dy =olayer.offsetHeight-omark.offsetHeight;
+						}
+						
+						
+						
+						omark.style.left = dx  + 'px';
+						omark.style.top = dy + 'px';
+						
+						
+						//大图
+						//计算比例 
+						var  bili = (olimg.offsetWidth-olarge.offsetWidth)/(osimg.offsetWidth-omark.offsetWidth);
+						
+						
+						
+						olimg.style.marginLeft = -dx*bili+  'px';
+						olimg.style.marginTop =- dy*bili+ 'px';
+				}
+				
+				olayer.onmouseout = function(){
+					
+					omark.style.display = "none";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="small">
+			<span id="mark">
+				
+			</span>
+			<span id="layer"></span>
+			<img src="img/small.png" id="simg"/>
+		</div>
+		<div id="large">
+			<img src="img/big.png" id="limg"/>
+		</div>
+	</body>
+</html>

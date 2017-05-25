@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#demo ul li{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="" value="" />
+		<input type="button" id="" value="百度一下" />
+		<div id="demo">
+			<!--<ul id="list">
+				<li>百度搜索百度搜索</li>
+				<li>百度搜索百度搜索</li>
+			</ul>-->
+		</div>
+		
+		<script type="text/javascript">
+			var keyWords = ["小杨才是最纯洁的", "小杨才是最帅的", "小段是最猥琐的", "小超是最龌龊的", "传智播客是一个培训机构", "传说在传智有个很帅很纯洁的小杨", "苹果好吃", "苹果此次召回还是没有中国"];
+			var ainput = document.getElementsByTagName("input");
+			var odemo =  document.getElementById('demo');
+			
+			
+			ainput[0].onkeyup = function(){
+				var This =this;
+				
+				//每次触发事件 ，先找找list，有酒删除，没有就算了
+				var olist = document.getElementById('list')
+				if(olist){
+					odemo.removeChild(olist);
+				}
+				var arr = [];
+				for (var i =0;i<keyWords.length;i++) {
+					if(keyWords[i].indexOf(this.value)==0){
+						arr.push(keyWords[i])
+					}
+					
+				}
+				
+				
+				if(this.value.length==0){
+					return;
+				}
+				
+				var oul = document.createElement('ul');
+				oul.id ="list"
+				for (var i=0;i<arr.length;i++) {
+					var ali = document.createElement('li');
+					ali.innerHTML = arr[i];
+					oul.appendChild(ali)
+					odemo.appendChild(oul);
+					ali.onmouseover = function(){
+						this.style.background ="red"
+					}
+					ali.onmouseout = function(){
+						this.style.background ="";
+					}
+					ali.onclick = function(){
+						This.value = this.innerHTML;
+						odemo.style.display = 'none';
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>

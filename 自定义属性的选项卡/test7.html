@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.same{
+				height: 300px;
+				width: 300px;
+				display: none;
+			}
+			.active{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="tab">
+				<a href="#" data-cont="tab1">选项卡</a>
+				<a href="#" class="active" data-cont="tab2">选项卡</a>
+				<a href="#" data-cont="tab3">选项卡</a>
+				<a href="#" data-cont="tab4">选项卡</a>
+			</div>
+			<div id="tab1" class="same">
+				tab1
+			</div>
+			<div id="tab2" class="same">
+				tab2
+			</div>
+			<div id="tab3" class="same">
+				tab3
+			</div>
+			<div id="tab4" class="same">
+				tab4
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var tabnav = document.querySelectorAll("#tab a");
+		var moren = document.querySelector('a.active');
+		var  icur= moren.dataset['cont']
+		
+		document.querySelector('#'+icur).style.display="block";
+		for (var i =0; i<tabnav.length;i++) {
+			tabnav[i].addEventListener('click',function(){
+				//用active找到那一项
+				var cruuent = document.querySelector('a.active');
+				//清楚有active的那一项
+				cruuent.classList.remove('active');
+				var oldid = cruuent.dataset['cont']
+				document.querySelector('#'+oldid).style.display="none";
+				//然后给自己添加class
+				this.classList.add("active");
+				
+				//通过自定义属性找到对应的内容区
+				var targetid = this.dataset['cont'];
+				
+//				var  adiv=document.querySelectorAll('.same');
+//				for (var i=0;i<adiv.length;i++) {
+//					adiv[i].style.display="none";
+//				}
+				
+				document.querySelector('#'+targetid).style.display="block";
+				
+			})
+		}
+	</script>
+</html>
